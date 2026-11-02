@@ -1,4 +1,4 @@
-"""Carga comum dos scripts: o depósito de dados do Zenodo (pasta deposit/, ou a indicada em PROBE_DATA) e as medidas
+"""Carga comum dos scripts: o conjunto de dados do Zenodo (pasta dataset/, ou a indicada em PROBE_DATA) e as medidas
 clássicas calculadas pelo probebehavior."""
 import os
 
@@ -6,7 +6,7 @@ import pandas as pd
 import probebehavior as pb
 
 RAIZ = os.path.dirname(os.path.abspath(__file__))
-DADOS = os.environ.get('PROBE_DATA', os.path.join(RAIZ, 'deposit'))
+DADOS = os.environ.get('PROBE_DATA', os.path.join(RAIZ, 'dataset'))
 
 
 def saida(nome):
@@ -16,7 +16,7 @@ def saida(nome):
 
 
 def experimento():
-    """Uma linha por teste, na ordem do depósito (as permutações e os bootstraps dependem dela)."""
+    """Uma linha por teste, na ordem do conjunto de dados (as permutações e os bootstraps dependem dela)."""
     e = pb.read_rtrack_experiment(os.path.join(DADOS, 'data', 'experiment.csv'))
     return e.rename(columns={'cohort': 'Experimento', 'group': 'Grupo', 'session': 'Fase'})
 

@@ -18,8 +18,8 @@ table of the article from the archived data.
    pip install -r requirements.txt
    ```
 
-2. Download the data deposit from Zenodo and unzip it into `deposit/`, so that `deposit/data/experiment.csv` exists (or
-   set the environment variable `PROBE_DATA` to the unzipped folder).
+2. Download the dataset from Zenodo (`watermaze_probe_dataset.zip`) and unzip it into `dataset/`, so that
+   `dataset/data/experiment.csv` exists (or set the environment variable `PROBE_DATA` to the unzipped folder).
 
 3. Run everything, in order:
 
@@ -41,7 +41,7 @@ Random seeds are fixed in each script, so the permutation and bootstrap results 
 | `04_robustness.py` | 3 × 3 grid of zone radius and time window | Fig. S1 |
 | `05_review_analyses.py` | sample flow, sensitivity without zeros, regression to the mean, kinematic covariates, principal-component loadings (exploratory) | Results; Tables S4, S6 and S7; Fig. S3 |
 | `06_figures.py` | figures from the results above | Figs 1–4, S1 and S2 |
-| `dados.py` | reads the deposit and computes the classic measures with `probebehavior.classic_measures` | — |
+| `dados.py` | reads the dataset and computes the classic measures with `probebehavior.classic_measures` | — |
 
 Comments, variable names and printed output are in Portuguese, the language in which the analyses were written.
 
@@ -66,4 +66,4 @@ public platform.
 
 ## License
 
-Code: MIT (see `LICENSE`). Data: CC BY 4.0, stated in the Zenodo deposit.
+Code: MIT (see `LICENSE`). Data: CC BY 4.0, stated in the Zenodo dataset.
