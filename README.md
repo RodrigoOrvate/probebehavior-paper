@@ -18,6 +18,9 @@ table of the article from the archived data.
    pip install -r requirements.txt
    ```
 
+   The strategy analysis (`07_pre_arrival_strategies.py`) also needs R with Rtrack (tested with R 4.3.2 and Rtrack 2.0.4,
+   `install.packages("Rtrack")`); it finds `Rscript` on the `PATH` or in the environment variable `RSCRIPT`.
+
 2. Download the dataset from [Zenodo](https://doi.org/10.5281/zenodo.23898439) (`watermaze_probe_dataset.zip`) and
    unzip it into `dataset/`, so that `dataset/data/experiment.csv` exists (or set the environment variable `PROBE_DATA`
    to the unzipped folder).
@@ -42,6 +45,7 @@ Random seeds are fixed in each script, so the permutation and bootstrap results 
 | `04_robustness.py` | 3 × 3 grid of zone radius and time window | Fig. S1 |
 | `05_review_analyses.py` | sample flow, sensitivity without zeros, regression to the mean, kinematic covariates, principal-component loadings (exploratory) | Results; Tables S4, S6 and S7; Fig. S3 |
 | `06_figures.py` | figures from the results above | Figs 1–4, S1 and S2 |
+| `07_pre_arrival_strategies.py`, `rtrack_strategies.R` | Rtrack strategies before the first arrival, and persistence by strategy (exploratory) | Results; Table S8 |
 | `dados.py` | reads the dataset and computes the classic measures with `probebehavior.classic_measures` | — |
 
 Comments, variable names and printed output are in Portuguese, the language in which the analyses were written.
