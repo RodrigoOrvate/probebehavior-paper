@@ -218,3 +218,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Zenodo data deposit, downloaded separately
+deposit/
+
+# outputs of run_all.py (some are caches the scripts reuse)
+results/
+figures/

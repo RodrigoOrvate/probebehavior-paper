@@ -1,0 +1,13 @@
+{
+  "title": "probebehavior-paper: analysis code for water maze probe tests aligned on the first arrival at the empty goal",
+  "description": "Scripts that reproduce the analyses, figures and supplementary tables of the article 'What rats do when the platform is not there: water maze probe tests aligned on the first arrival at the empty goal' from the archived trajectories, with the analysis plans and their SHA-256 hashes. Uses the Python package probebehavior 0.1.0 (doi:10.5281/zenodo.23888805).",
+  "upload_type": "software",
+  "license": "MIT",
+  "creators": [
+    {"name": "Orvate, Rodrigo", "affiliation": "Brain Institute, Federal University of Rio Grande do Norte, Natal, Brazil"}
+  ],
+  "related_identifiers": [
+    {"identifier": "10.5281/zenodo.23888805", "relation": "requires", "scheme": "doi"}
+  ],
+  "keywords": ["Morris water maze", "probe test", "spatial memory", "reproducibility", "probebehavior"]
+}
