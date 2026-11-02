@@ -7,7 +7,7 @@ table of the article from the archived data.
 | | |
 |---|---|
 | Measures | Python package [probebehavior](https://github.com/RodrigoOrvate/probebehavior) 0.1.0, [doi:10.5281/zenodo.23888805](https://doi.org/10.5281/zenodo.23888805) |
-| Data | 554 probe-test trajectories of 278 rats, Zenodo, [DATA DOI TO BE ADDED] (CC BY 4.0) |
+| Data | 554 probe-test trajectories of 278 rats, Zenodo, [doi:10.5281/zenodo.23898439](https://doi.org/10.5281/zenodo.23898439) (CC BY 4.0) |
 | Code | this repository (MIT) |
 
 ## Reproducing the article
@@ -18,8 +18,9 @@ table of the article from the archived data.
    pip install -r requirements.txt
    ```
 
-2. Download the dataset from Zenodo (`watermaze_probe_dataset.zip`) and unzip it into `dataset/`, so that
-   `dataset/data/experiment.csv` exists (or set the environment variable `PROBE_DATA` to the unzipped folder).
+2. Download the dataset from [Zenodo](https://doi.org/10.5281/zenodo.23898439) (`watermaze_probe_dataset.zip`) and
+   unzip it into `dataset/`, so that `dataset/data/experiment.csv` exists (or set the environment variable `PROBE_DATA`
+   to the unzipped folder).
 
 3. Run everything, in order:
 
