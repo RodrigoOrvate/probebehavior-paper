@@ -1,6 +1,6 @@
 """Análises exploratórias pedidas na revisão do manuscrito (02/11/2026), sem plano prévio: fluxo de animais, sensibilidade
 sem persistência zero para quem não chega, regressão à média contínua, covariáveis motoras e trajetórias representativas
-(Figura S3). Saída em results/review/."""
+(Figura S2). Saída em results/review/."""
 import os
 
 import matplotlib
@@ -192,7 +192,7 @@ say(f'  estabilidade PT1 → PT2 nos controles (n = {len(par)}): ρ bruto {stats
     f'ρ do resíduo {stats.spearmanr(par.persist_resid, par.persist_resid_PT2)[0]:.2f}')
 pd.DataFrame(mot).to_csv(os.path.join(SAIDA, 'covariaveis_motoras.csv'), index=False)
 
-# ---------------- 5. Figura S3: trajetórias representativas ----------------
+# ---------------- 5. Figura S2: trajetórias representativas ----------------
 CINZA, PRETO, MUDO, TINTA = '#8A8F98', '#111111', '#5B6370', '#18212B'
 plt.rcParams.update({'font.family': ['Arial', 'DejaVu Sans'], 'font.size': 9, 'axes.titlesize': 9, 'axes.titleweight': 'bold',
                      'axes.titlelocation': 'left'})
@@ -232,6 +232,6 @@ for a, (rot, c), L in zip(ax.flat, casos, 'ABCDEF'):
     a.set_aspect('equal')
     a.axis('off')
 for ext in ('png', 'pdf'):
-    fig.savefig(os.path.join(FIG, f'FigS3.{ext}'), dpi=300, bbox_inches='tight', facecolor='white')
+    fig.savefig(os.path.join(FIG, f'FigS2.{ext}'), dpi=300, bbox_inches='tight', facecolor='white')
 say('\n5. Figura S3: ' + '; '.join(f'{r}: {c._TrackID}' for r, c in casos))
 out.close()

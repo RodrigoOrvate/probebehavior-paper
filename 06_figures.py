@@ -1,4 +1,4 @@
-"""Figures of the probebehavior article (Fig. 1–4, S1, S2) from the results in results/abc/ and results/zip_test/."""
+"""Figures of the probebehavior article (Fig. 1–4 and S1) from the results in results/abc/ and results/zip_test/."""
 import os
 
 import matplotlib
@@ -285,23 +285,3 @@ for a, (col, tit) in zip(ax.flat, PAINEIS):
     a.set(xlabel='window', ylabel='zone radius', title=tit)
     a.spines[:].set_visible(False)
 salvar(fig, 'FigS1')
-
-# ---------------- Figure S2: arrival per cohort ----------------
-fig, ax = plt.subplots(1, 2, figsize=(7.2, 3.4), gridspec_kw=dict(wspace=0.35))
-g = pt1.groupby('leva').agg(chegou=('reached', 'mean'), n=('reached', 'size')).reindex(LEVAS_B)
-ax[0].yaxis.grid(True, color='#E6E4DE', lw=0.6)
-ax[0].set_axisbelow(True)
-ax[0].bar(range(len(g)), g.chegou * 100, color=PRETO, width=0.6)
-for i, pc in enumerate(g.chegou):
-    ax[0].text(i, pc * 100 + 2, f'{pc:.0%}', ha='center', fontsize=5.5, color=TINTA)
-ax[0].set_xticks(range(len(g)), [f'{l} ({n})' for l, n in zip(g.index, g.n)], rotation=90, fontsize=6)
-ax[0].tick_params(axis='x', length=0)
-ax[0].set(ylabel='% reaching the goal at PT1', ylim=(0, 105), yticks=[0, 25, 50, 75, 100], title='Arrival (cohort, rats)')
-lat = pt1[pt1.reached.astype(bool)]
-for i, l in enumerate(LEVAS_B):
-    s = lat[lat.leva == l].arrival_latency_s
-    ax[1].plot(np.full(len(s), i) + rng.uniform(-0.18, 0.18, len(s)), s, 'o', ms=2, color=PRETO, alpha=0.35, mew=0)
-    ax[1].plot([i - 0.32, i + 0.32], [s.median()] * 2, color=PRETO, lw=2.2, solid_capstyle='butt')
-ax[1].set_xticks(range(len(LEVAS_B)), LEVAS_B, rotation=90, fontsize=6)
-ax[1].set(ylabel='latency to goal (s)', title='Latency of those who arrive')
-salvar(fig, 'FigS2')

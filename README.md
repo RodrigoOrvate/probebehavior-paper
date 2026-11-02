@@ -39,13 +39,13 @@ Random seeds are fixed in each script, so the permutation and bootstrap results 
 
 | Script | Analysis | In the article |
 |---|---|---|
-| `01_sensitivity_description_second_probe.py` | sensitivity of each measure to the drugs (A); description of the first probe (B); first versus second probe in controls (C) | Results; Fig. 4A; Table S3 |
+| `01_sensitivity_description_second_probe.py` | sensitivity of each measure to the drugs (A); description of the first probe (B); first versus second probe in controls (C) | Results; Fig. 4A; Table S3a |
 | `02_zip_test.py` | prespecified ZIP test (Q1–Q4) and its sensitivity analyses | Results; Fig. 4B |
 | `03_second_probe_dissociation.py` | second-session dissociation between persistence and latency (exploratory) | Results; Fig. 4C |
 | `04_robustness.py` | 3 × 3 grid of zone radius and time window | Fig. S1 |
-| `05_review_analyses.py` | sample flow, sensitivity without zeros, regression to the mean, kinematic covariates, principal-component loadings (exploratory) | Results; Tables S4, S6 and S7; Fig. S3 |
-| `06_figures.py` | figures from the results above | Figs 1–4, S1 and S2 |
-| `07_pre_arrival_strategies.py`, `rtrack_strategies.R` | Rtrack strategies before the first arrival, and persistence by strategy (exploratory) | Results; Table S8 |
+| `05_review_analyses.py` | sample flow, sensitivity without zeros, regression to the mean, kinematic covariates, principal-component loadings (exploratory) | Results; Tables S1 and S3b; Fig. S2 |
+| `06_figures.py` | figures from the results above | Figs 1–4 and S1 |
+| `07_pre_arrival_strategies.py`, `rtrack_strategies.R` | Rtrack strategies before the first arrival, and persistence by strategy (exploratory) | Results |
 | `dados.py` | reads the dataset and computes the classic measures with `probebehavior.classic_measures` | — |
 
 Comments, variable names and printed output are in Portuguese, the language in which the analyses were written.
@@ -53,7 +53,7 @@ Comments, variable names and printed output are in Portuguese, the language in w
 ## Analysis plans
 
 `plans/` holds the analysis plans, byte-identical to the versions whose SHA-256 hashes were recorded before each
-analysis was run (Analysis plans and Table S5 in the article). Check them with `sha256sum plans/*.md`.
+analysis was run (Table S4 in the article). Check them with `sha256sum plans/*.md`.
 
 | Plan | File | SHA-256 (first 8) |
 |---|---|---|
