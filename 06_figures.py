@@ -242,7 +242,7 @@ for i, r_ in q.iterrows():
 ax[1].axvline(0, color=MUDO, lw=0.6, ls=':')
 ax[1].set_yticks(range(len(q)), [rot[a] for a in q.analise], fontsize=7)
 ax[1].invert_yaxis()
-ax[1].set(xlabel='ZIP × measure on PT2 quadrant\n(pp per unit; persistence per 0.1)', title='Preregistered ZIP test', xlim=(-20, 14))
+ax[1].set(xlabel='ZIP × measure on PT2 quadrant\n(pp per unit; persistence per 0.1)', title='Prespecified ZIP test', xlim=(-20, 14))
 letra(ax[1], 'B')
 dsc = pd.read_csv(os.path.join(ABC, 'dissociacao_controles.csv'))
 zf = lambda v, ref: (v - ref.mean()) / ref.std()
